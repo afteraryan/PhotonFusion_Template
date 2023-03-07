@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3960376619294590961}
+  - {fileID: 9197690476636548889}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   runInBackground: 1
   statsResetInterval: 1000
   speakerPrefab: {fileID: 8648859535374807386, guid: 230f4cce0834b3945952653178b39967, type: 3}
-  primaryRecorder: {fileID: 7148135078406011439}
+  primaryRecorder: {fileID: 7215317508519010977}
   usePrimaryRecorder: 0
   Settings:
     AppIdRealtime: 
@@ -98,8 +98,8 @@ MonoBehaviour:
     NetworkLogging: 1
   ShowSettings: 1
   UseFusionAppSettings: 1
-  UseFusionAuthValues: 1
---- !u!1 &6975026464272845902
+  UseFusionAuthValues: 0
+--- !u!1 &6588292976531791074
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,8 +107,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3960376619294590961}
-  - component: {fileID: 7148135078406011439}
+  - component: {fileID: 9197690476636548889}
+  - component: {fileID: 7215317508519010977}
   m_Layer: 0
   m_Name: Recorder
   m_TagString: Untagged
@@ -116,14 +116,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3960376619294590961
+--- !u!4 &9197690476636548889
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6975026464272845902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 6588292976531791074}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -131,13 +131,13 @@ Transform:
   m_Father: {fileID: 7307251777832816158}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7148135078406011439
+--- !u!114 &7215317508519010977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6975026464272845902}
+  m_GameObject: {fileID: 6588292976531791074}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91175dcc15224463780e01a8a98b1b60, type: 3}
