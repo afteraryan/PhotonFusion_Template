@@ -7,6 +7,8 @@ public class CharacterInputHandler : MonoBehaviour
     Vector2 moveInputVector = Vector2.zero;
     Vector2 viewInputVector = Vector2.zero;
     bool isJumpButtonPressed = false;
+    private FixedJoystick joystick_move;
+    private DynamicJoystick joystick_look;
 
     //Other components
     //CharacterMovementHandler characterMovementHandler;
@@ -16,30 +18,45 @@ public class CharacterInputHandler : MonoBehaviour
     {
         //characterMovementHandler = GetComponent<CharacterMovementHandler>();
         localCameraHandler = GetComponentInChildren<LocalCameraHandler>();
+        joystick_move = FindObjectOfType<FixedJoystick>();
+        joystick_look = FindObjectOfType<DynamicJoystick>();
+
+
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         //View Input
+        /*
         viewInputVector.x = Input.GetAxis("Mouse X");
         viewInputVector.y = Input.GetAxis("Mouse Y") * -1; // Invert the mouse look
+        */
+        viewInputVector.x = joystick_look.Horizontal;
+        viewInputVector.y = joystick_look.Vertical * -1;
+
+
         //Set view
         localCameraHandler.SetViewInputVector(viewInputVector);
-        
+
         //characterMovementHandler.SetViewInputVector(viewInputVector);
-        
+
         //Move Input
-        moveInputVector.x = Input.GetAxis("Horizontal");
-        moveInputVector.y = Input.GetAxis("Vertical");
+        /* 
+         moveInputVector.x = Input.GetAxis("Horizontal");
+         moveInputVector.y = Input.GetAxis("Vertical");
+        */
+        moveInputVector.x = joystick_move.Horizontal;
+        moveInputVector.y = joystick_move.Vertical;
+
 
 
         //Jump
